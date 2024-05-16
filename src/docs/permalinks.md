@@ -220,7 +220,7 @@ permalink: "index.json"
 
 Let's say you have a directory of content templates like `recipes/cookies.md` and `recipes/soup.md` and 50 more. Each of these content templates has a title in their frontmatter. While you could manually set a permalink in the frontmatter of each recipe you can also dynamically generate the permalink inside a [Directory Data File](/docs/data-template-dir/) like `recipes.11tydata.js`.
 
-Because of the order of the [data cascade](/docs/data-cascade/) the title of a content template is not immediately available in the directory data file. However, `permalink` is a special case of implied [Computed Data](docs/data-computed/) and will have this data available. Inside of your directory data file `recipes.11tydata.js` you could write this:
+Because of the order of the [data cascade](/docs/data-cascade/) the title of a content template is not immediately available in the directory data file. However, `permalink` is a special case of implied [Computed Data](/docs/data-computed/) and will have this data available. Inside of your directory data file `recipes.11tydata.js` you could write this:
 
 ```javascript
 module.exports = {
@@ -236,7 +236,7 @@ The title will be [slugified](/docs/filters/slugify/) to be URL-friendly.
 
 _Decouple a page’s primary URL from its permalink._
 
-As an example, say you have two content files: `about.en.html` and `about.es.html`. You’ve already set up the [`addGlobalData` feature to remap their respective output](/docs/data-eleventy-supplied/#changing-your-project-default-permalinks) to `_site/about.en.html` and `_site/about.es.html`.
+As an example, say you have two content files: `about.en.html` and `about.es.html`. You’ve already set up the [`addGlobalData` feature to remap their respective output](/docs/data-eleventy-supplied/#changing-your-projects-default-permalinks) to `_site/about.en.html` and `_site/about.es.html`.
 
 Use [server-side redirects](https://docs.netlify.com/routing/redirects/redirect-options/#redirect-by-country-or-language) to control which of these files is shown.
 
